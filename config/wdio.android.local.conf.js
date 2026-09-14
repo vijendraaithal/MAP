@@ -3,7 +3,7 @@ const { deepmerge } = require('deepmerge-ts');
 
 exports.config = deepmerge(baseConfig, {
     specs: [
-        '../test/specs/**/*.js'
+        '../test/specs/**/android/**/*.js'
     ],
 
     maxInstances: 1,
@@ -16,7 +16,8 @@ exports.config = deepmerge(baseConfig, {
         'appium:app': require('path').join(process.cwd(), 'apps/android.apk'),
         'appium:autoGrantPermissions': true,
         'appium:newCommandTimeout': 240,
-        'appium:appWaitActivity': '*',
+        'appium:appWaitActivity': '*'
+        // 'appium:appWaitDuration': 60000
     }],
 
     port: 4723

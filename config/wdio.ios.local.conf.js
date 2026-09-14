@@ -3,9 +3,8 @@ const { deepmerge } = require('deepmerge-ts');
 
 exports.config = deepmerge(baseConfig, {
     specs: [
-        '../test/specs/smoke/ios-sanity-check.smoke.js'
+        '../test/specs/**/ios/**/*.js'
     ],
-
     maxInstances: 1,
 
     capabilities: [{
