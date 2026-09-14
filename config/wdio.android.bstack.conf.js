@@ -22,7 +22,7 @@ exports.config = safeMerge(baseConfig, {
         'appium:deviceName': 'Google Pixel 8',
         'appium:platformVersion': '14.0',
         'appium:automationName': 'UiAutomator2',
-        'appium:app': 'bs://SauceLabsDemoAndroid',
+        'appium:app': 'SauceLabsDemoAndroid',
         'bstack:options': {
             projectName: 'Mobile Automation Framework',
             buildName: 'Android Smoke Suite',
