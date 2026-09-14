@@ -1,9 +1,9 @@
+const { deepmergeCustom } = require('deepmerge-ts');
+
+const safeMerge = deepmergeCustom({ mergeArrays: false });
+
 exports.config = {
     runner: 'local',
-
-    // NOTE: no `specs` or `capabilities` here — each env-specific config
-    // (wdio.android.local.conf.js, wdio.ios.local.conf.js, etc.) sets its own
-    // `specs`/`suites` selection and `capabilities`, then merges this base in.
 
     exclude: [],
 
@@ -27,7 +27,6 @@ exports.config = {
         ['allure', { outputDir: 'reports/allure-results' }]
     ],
 
-    // Suite groupings — referenced later via --suite smoke / sanity / regression
     suites: {
         smoke: [],
         sanity: [],
@@ -40,3 +39,5 @@ exports.config = {
         }
     }
 };
+
+exports.safeMerge = safeMerge;

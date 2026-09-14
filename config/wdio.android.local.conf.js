@@ -1,7 +1,6 @@
-const { config: baseConfig } = require('./wdio.base.conf');
-const { deepmerge } = require('deepmerge-ts');
+const { config: baseConfig, safeMerge } = require('./wdio.base.conf');
 
-exports.config = deepmerge(baseConfig, {
+exports.config = safeMerge(baseConfig, {
     specs: [
         '../test/specs/**/android/**/*.js'
     ],
