@@ -10,12 +10,13 @@ exports.config = deepmerge(baseConfig, {
 
     capabilities: [{
         platformName: 'Android',
-        'appium:deviceName': 'Android Emulator',
-        'appium:platformVersion': '14',
+        'appium:deviceName': 'Pixel_9a',
+        'appium:platformVersion': '16',
         'appium:automationName': 'UiAutomator2',
         'appium:app': require('path').join(process.cwd(), 'apps/android.apk'),
         'appium:autoGrantPermissions': true,
-        'appium:newCommandTimeout': 240
+        'appium:newCommandTimeout': 240,
+        'appium:appWaitActivity': '*',
     }],
 
     port: 4723
