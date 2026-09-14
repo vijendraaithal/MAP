@@ -9,7 +9,8 @@
   "scripts": {
     "android:local": "wdio run ./config/wdio.android.local.conf.js",
     "ios:local": "wdio run ./config/wdio.ios.local.conf.js",
-    "android:bstack": "wdio run ./config/wdio.android.bstack.conf.js"
+    "android:bstack": "wdio run ./config/wdio.android.bstack.conf.js",
+    "ios:bstack": "wdio run ./config/wdio.ios.bstack.conf.js"
   },
   "keywords": [],
   "author": "",
