@@ -1,0 +1,26 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# WDIO / Allure reports
+reports/
+allure-results/
+allure-report/
+
+# App binaries
+apps/*.apk
+apps/*.ipa
+
+# Env / secrets
+.env
+.env.local
+
+# OS
+.DS_Store
+
+# Appium / iOS build artifacts
+*.xcarchive
+DerivedData/
+
+# Logs
+*.log
