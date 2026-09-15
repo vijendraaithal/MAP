@@ -8,4 +8,4 @@ describe('Login - Android Smoke', () => {
         const isProductsPageDisplayed = await ProductsPage.isDisplayed();
         expect(isProductsPageDisplayed).toBe(true);
     });
-});
+});// CI pipeline verification
