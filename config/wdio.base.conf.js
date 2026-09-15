@@ -22,7 +22,19 @@ exports.config = {
     timeout: 60000,
   },
 
-  reporters: ['spec', ['allure', { outputDir: 'reports/allure-results' }]],
+  reporters: [
+    'spec',
+    ['allure', { outputDir: 'reports/allure-results' }],
+    [
+      'junit',
+      {
+        outputDir: 'reports/junit-results',
+        outputFileFormat: function (options) {
+          return `results-${options.cid}.xml`;
+        },
+      },
+    ],
+  ],
 
   suites: {
     androidSmoke: ['../test/specs/smoke/android/**/*.js'],
