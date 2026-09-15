@@ -1,6 +1,8 @@
+const i18n = require('../../utils/i18n.manager');
+
 class ProductsPage {
     get productsHeader() {
-        return $('android=new UiSelector().text("PRODUCTS")');
+        return $('android=new UiSelector().text("' + i18n.get('products.header') + '")');
     }
 
     async isDisplayed() {

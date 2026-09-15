@@ -1,0 +1,10 @@
+{
+  "login": {
+    "usernamePlaceholder": "Username",
+    "passwordPlaceholder": "Password",
+    "loginButton": "LOGIN"
+  },
+  "products": {
+    "header": "PRODUCTS"
+  }
+}

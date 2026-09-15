@@ -1,25 +1,32 @@
 const BasePage = require('../base/base.page');
 
 class LoginPage extends BasePage {
-    // ===== Locators =====
-    get usernameInput() {
-        return $('~test-Username'); // accessibility id — identical value to Android
-    }
+  get usernameInput() {
+    return $('~test-Username');
+  }
 
-    get passwordInput() {
-        return $('~test-Password'); // accessibility id — identical value to Android
-    }
+  get passwordInput() {
+    return $('~test-Password');
+  }
 
-    get loginButton() {
-        return $('~test-LOGIN'); // accessibility id — iOS-only; Android has none for this element
-    }
+  get loginButton() {
+    return $('~test-LOGIN');
+  }
 
-    // ===== Actions =====
-    async login(username, password) {
-        await this.waitAndSetValue(this.usernameInput, username);
-        await this.waitAndSetValue(this.passwordInput, password);
-        await this.waitAndClick(this.loginButton);
-    }
+  get errorMessage() {
+    return $('~test-Error message');
+  }
+
+  async login(username, password) {
+    await this.waitAndSetValue(this.usernameInput, username);
+    await this.waitAndSetValue(this.passwordInput, password);
+    await this.waitAndClick(this.loginButton);
+  }
+
+  async getErrorMessageText() {
+    await this.errorMessage.waitForDisplayed({ timeout: 15000 });
+    return this.errorMessage.getText();
+  }
 }
 
 module.exports = new LoginPage();
